@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+
+.Nav {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  list-style-type: none;
+}
+
+.Nav-link {
+  color: #61dafb;
+}
+
+
