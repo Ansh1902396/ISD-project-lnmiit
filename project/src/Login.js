@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid, Paper, Typography } from'@mui/material';
+import { Button, Grid, Paper, Typography,TextField } from'@mui/material';
 
 const Login = () => {
     
@@ -15,17 +15,12 @@ const Login = () => {
             <Paper elevation = {10} style = {paperStyle} >
                 <Typography variant='h3'>Login</Typography>
 
-                <form name ="Form">
-                    <label> <Typography variant = 'h5'>User name:</Typography> 
-                    <input type="text" id="uname" name="uname"></input>
-                    </label>
-                    <label><Typography variant = 'h5'>Password:</Typography>
-                    <input type="text" id="pass" name="pass"></input>
-                    </label>
-                    <Button variant = "contained">
-                    <Typography variant = 'button'>Login</Typography>
-                    </Button>
-                </form>
+                <TextField  variant ="outlined" label='Username'  fullWidth required/>
+                <TextField variant ="outlined" label='Password'  type='password' fullWidth required/>
+
+                <Button type = 'submit' variant = 'contained'>
+                <Typography variant='button'>Login</Typography>
+                </Button>
             </Paper>
       </Grid>
     );
