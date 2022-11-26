@@ -15,10 +15,10 @@ const Login = () => {
             <Paper elevation = {10} style = {paperStyle} >
                 <Typography variant='h3'>Login</Typography>
 
-                <TextField  variant ="outlined" label='Username'  fullWidth required/>
-                <TextField variant ="outlined" label='Password'  type='password' fullWidth required/>
+                <TextField id = "uField" name = "uField" variant ="outlined" label='Username'  fullWidth required/>
+                <TextField id = "pField" name = "pField" variant ="outlined" label='Password'  type='password' fullWidth required/>
 
-                <Button type = 'submit' variant = 'contained'>
+                <Button id = "subButton" name = "subButton" type = 'submit' variant = 'contained'>
                 <Typography variant='button'>Login</Typography>
                 </Button>
             </Paper>
