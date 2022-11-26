@@ -18,7 +18,6 @@ const App = () => {
         <label>User name:
           <input type="text" id="uname" name="uname"></input>
         </label>
-        
         <label>Password:
           <input type="text" id="pass" name="pass"></input>
         </label>
