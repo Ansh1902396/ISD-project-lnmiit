@@ -13,13 +13,13 @@ const Login = () => {
     return(
         <Grid>
             <Paper elevation = {10} style = {paperStyle} >
-                <Typography variant='h3h4'>Login</Typography>
+                <Typography variant='h3'>Login</Typography>
 
                 <form name ="Form">
-                    <label> <Typography variant = 'body1'>User name:</Typography> 
+                    <label> <Typography variant = 'h5'>User name:</Typography> 
                     <input type="text" id="uname" name="uname"></input>
                     </label>
-                    <label><Typography variant = 'body1'>Password:</Typography>
+                    <label><Typography variant = 'h5'>Password:</Typography>
                     <input type="text" id="pass" name="pass"></input>
                     </label>
                     <Button variant = "contained">
