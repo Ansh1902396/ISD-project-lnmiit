@@ -11,7 +11,7 @@ const Login = () => {
     }
     
     return(
-        <Grid>
+        <Grid align ='center'>
             <Paper elevation = {10} style = {paperStyle} >
                 <Typography variant='h3'>Login</Typography>
 
