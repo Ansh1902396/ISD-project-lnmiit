@@ -6,9 +6,9 @@ const App = () => {
     <div className="App">
     <header>
         <ul name="LinksList" className="Nav">
-            <li className="Nav">Page 1</li>
-            <li className="Nav">Page 2</li>
-            <li className="Nav">Page 3</li>
+            <li className="Nav-link">Page 1</li>
+            <li className="Nav-link">Page 2</li>
+            <li className="Nav-link">Page 3</li>
         </ul>
     </header>
 
