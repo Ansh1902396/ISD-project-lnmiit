@@ -8,7 +8,7 @@ const Navbar = () => {
     return(
         <AppBar position = 'static'>
             <Toolbar>
-                <Typography variant = 'h5' component = 'div' sx = {{ flexGrow: 1}}>BEST SITE</Typography>
+                <Typography variant = 'h5' component = 'div' sx = {{ flexGrow: 1}}>ISD Project</Typography>
             </Toolbar>
             <Stack direction='row' spacing = {2} >
                 <Link to = '/'><Button color="inherit">Home</Button></Link>

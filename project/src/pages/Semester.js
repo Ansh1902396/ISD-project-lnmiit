@@ -1,15 +1,18 @@
 import { Container, Grid, Paper, Typography,Box, Stack, Card, CardContent } from "@mui/material";
 
 
-var teacherName = "Amit Neogi";
-var subjectName = "Physics";
-var subjectGrade = "A";
-
-
 var name = "Rudransh";
 const curSemSub = [];
 curSemSub[0] = "Mathematics 1";
 curSemSub[1] = "Technical Com. in English";
+
+const prevSemData = [];
+
+prevSemData[0] = {
+    tName : "Amit Neogi",
+    sName : "Physics",
+    grade : "A"
+}
 
 
 
@@ -23,6 +26,23 @@ const Semester = () => {
             </Typography>
         </CardContent>
     </Card>
+    );
+
+    const prevSemCard = prevSemData.map( subject =>
+        <Card  variant="outlined" sx={{ minWidth: 250 }}>
+            <CardContent>
+                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                    Teacher : {subject.tName}
+                </Typography>
+                <Typography variant="h5" component="div">
+                    {subject.sName}
+                </Typography>
+                
+                <Typography variant="body2">
+                    Grade : {subject.grade}
+                </Typography>
+            </CardContent>
+        </Card>
         );
 
     return(
@@ -49,20 +69,7 @@ const Semester = () => {
                         <Typography variant="h5" >Previous Semester:</Typography>
                     
                         <Stack direction = "row" spacing = {2}  sx= {{ mt : 2 }}>
-                        <Card  variant="outlined" sx={{ minWidth: 250 }}>
-                            <CardContent>
-                                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                    Teacher : {teacherName}
-                                </Typography>
-                                <Typography variant="h5" component="div">
-                                    {subjectName}
-                                </Typography>
-                
-                                <Typography variant="body2">
-                                Grade : {subjectGrade}
-                                </Typography>
-                            </CardContent>
-                        </Card>
+                            {prevSemCard}
                         </Stack>
 
                     </Paper>
