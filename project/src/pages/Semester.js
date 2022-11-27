@@ -1,4 +1,4 @@
-import { Container, Grid, Paper, Typography,Box } from "@mui/material";
+import { Container, Grid, Paper, Typography,Box, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 
 
@@ -16,7 +16,7 @@ const Semester = () => {
                 </Grid>
                 <Grid item xs = {12}>
                     <Paper>
-                        <Typography variant="h5" sx = {{padding : 3}}>Current Semester:</Typography><br/>
+                        <Typography variant="h5" sx = {{padding : 3}}>Current Semester:</Typography>
                         <Box sx={{padding: 3}}>
                             <Typography name ="currentSemSubjects" variant ="paragraph">
                                 Mathematics-1 , Technical Communication in English, Physics - 1, Computer Programming 
@@ -26,9 +26,14 @@ const Semester = () => {
                 </Grid>
 
                 <Grid item xs = {12}>
-                    <Paper>
-                        <Typography variant="h5" sx = {{padding : 3}}>Previous Semester:</Typography><br/>
-                        
+                    <Paper sx = {{padding : 3}}>
+                        <Typography variant="h5" >Previous Semester:</Typography>
+                    
+                        <Stack direction = "row" spacing = {2} >
+                            <Link to = "/Subject">Subject</Link>
+                            <Link to = "/Subject2">Subject2</Link>
+                        </Stack>
+
                     </Paper>
                 </Grid>
             </Grid>
