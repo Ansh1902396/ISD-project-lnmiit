@@ -1,11 +1,6 @@
 import { Container, Grid, Paper, Typography,Box, Stack, Card, CardContent } from "@mui/material";
 
 
-var teacherName = "Amit Neogi";
-var subjectName = "Physics";
-var subjectGrade = "A";
-
-
 var name = "Rudransh";
 const curSemSub = [];
 curSemSub[0] = "Mathematics 1";
