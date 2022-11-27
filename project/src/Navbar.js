@@ -1,5 +1,5 @@
-import { AppBar, Toolbar, Typography, Button } from "@mui/material";
-import { Stack } from "@mui/system";
+import { AppBar, Toolbar, Typography, Button, Stack } from "@mui/material";
+
 import { Link } from "react-router-dom";
 
 
@@ -13,6 +13,8 @@ const Navbar = () => {
             <Stack direction='row' spacing = {2} >
                 <Link to = '/'><Button color="inherit">Home</Button></Link>
                 <Link to = '/Login'><Button color="inherit">Login</Button></Link>
+                <Link to = '/Semester'><Button color="inherit">Semester</Button></Link>
+                <Link to = '/Subject'><Button color="inherit">Subject</Button></Link>
             </Stack>
         </AppBar>
     );
