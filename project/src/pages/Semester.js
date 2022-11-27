@@ -7,7 +7,7 @@ const Semester = () => {
 
     for ( let i = 0; i < numSem; i++){
     return(
-        <Container>
+        < Container sx={{padding:3}} >
             <Grid container spacing={3}>
                 <Grid item xs = {12}>
                     <Paper>
