@@ -1,14 +1,21 @@
-import { Grid,Box } from '@mui/material';
+
+import { Grid,Box, Typography } from '@mui/material';
+var teacherName = "Amit Neogi";
+var subjectName = "Physics";
 
 const Subject = () => {
     return (
-        <Grid container >
-
-            <Box item xs = {4}>
-                
-            </Box>
-            
-        </Grid>
+        <Box sx = {{padding : 3 }} fullwidth>
+            <Grid align = 'center' >
+                <Box> 
+                    <Typography variant='h2'>{subjectName}</Typography> 
+                </Box>
+                <Box>
+                    <Typography variant = "h5"> Teacher: {teacherName}</Typography>
+                </Box>
+            </Grid>
+        </Box>
+        
     );
 }
 

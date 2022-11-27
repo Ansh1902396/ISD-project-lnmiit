@@ -14,7 +14,6 @@ const Navbar = () => {
                 <Link to = '/'><Button color="inherit">Home</Button></Link>
                 <Link to = '/Login'><Button color="inherit">Login</Button></Link>
                 <Link to = '/Semester'><Button color="inherit">Semester</Button></Link>
-                <Link to = '/Subject'><Button color="inherit">Subject</Button></Link>
             </Stack>
         </AppBar>
     );
