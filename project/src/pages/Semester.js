@@ -1,11 +1,11 @@
-import { Container, Grid, Paper, Typography } from "@mui/material";
+import { Container, Grid, Paper, Typography,Box } from "@mui/material";
+import { Link } from "react-router-dom";
 
-var numSem = 1;
+
 var name = "Rudransh";
 
 const Semester = () => {
-
-    for ( let i = 0; i < numSem; i++){
+  
     return(
         < Container sx={{padding:3}} >
             <Grid container spacing={3}>
@@ -16,13 +16,18 @@ const Semester = () => {
                 </Grid>
                 <Grid item xs = {12}>
                     <Paper>
-                        <Typography variant="h5" sx = {{padding : 3}}>Current Semester:</Typography>
+                        <Typography variant="h5" sx = {{padding : 3}}>Current Semester:</Typography><br/>
+                        <Box sx={{padding : 3}}>
+                            <Typography name ="currentSemSubjects" variant ="paragraph">
+                                Mathematics-1 , Technical Communication in English, 
+                            </Typography>
+                        </Box>
                     </Paper>
                 </Grid>
-            </Grid>`
+            </Grid>
         </Container>
     );
-    }
+    
 }
 
 export default Semester;
