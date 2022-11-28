@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Grid, Paper, Typography, TextField } from "@mui/material";
 import GoogleButton from "react-google-button";
+import axios from 'axios'
 const Login = () => {
   const [inputs, setInputs] = useState({
     username: "",
@@ -11,17 +12,31 @@ const Login = () => {
     setInputs({ ...inputs, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (event) => {
-    console.log(inputs);
+  const handleSubmit = async(event) => {
+    // console.log(inputs);
+    
+    console.log(process.env.REACT_APP_API_URL)
+    try {
+			const res = await axios.post(`${process.env.REACT_APP_API_URL}login`, {
+			  email: inputs.username,
+			  password:inputs.password
+	
+			}, { validateStatus: false, withCredentials: true });
+		   console.log(res);
+			
+			// if(res.status != 401 && res.data.isgsec){
+			// setUser(res.data);
+			// setUserLogin(true);
+			// localStorage.setItem("userInfo",JSON.stringify(res.data));
+			// navigate('/gsechome');}
+			// console.log("this is  user data ==>", res.data);
+		  }
+		  catch (error) {
+			console.log(error)
+		  }
     setInputs({ username: "", password: "" });
   };
 
-  const googleAuth = () => {
-    window.open(
-      `${process.env.REACT_APP_API_URL}/auth/google/callback`,
-      "_self"
-    );
-  };
   const paperStyle = {
     padding: 20,
     height: "60vh",
@@ -76,10 +91,7 @@ const Login = () => {
         >
           <Typography variant="button">Login</Typography>
         </Button>
-        <GoogleButton
-          type="light" // can be light or dark
-          onClick={googleAuth}
-        />
+
       </Paper>
     </Grid>
   );
