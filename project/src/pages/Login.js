@@ -37,14 +37,6 @@ const Login = () => {
     setInputs({ username: "", password: "" });
   };
 
-  const googleAuth = async() => {
-    // window.open(
-    //   `${process.env.REACT_APP_API_URL}/auth/google/callback`,
-    //   "_self"
-    // );
-
-    
-  };
   const paperStyle = {
     padding: 20,
     height: "60vh",
@@ -99,10 +91,7 @@ const Login = () => {
         >
           <Typography variant="button">Login</Typography>
         </Button>
-        <GoogleButton
-          type="light" // can be light or dark
-          onClick={googleAuth}
-        />
+
       </Paper>
     </Grid>
   );

@@ -63,7 +63,7 @@ const CurrentSemesterTeacher = () => {
                                     label="Enter Roll No"
                                     required
                                 />
-                                <Typography variant="h5"> Updated Grade :</Typography>
+                                <Typography variant="h5"> Update Grade :</Typography>
                                 <TextField
                                     name="enterUp2Roll"
                                     variant="outlined"
