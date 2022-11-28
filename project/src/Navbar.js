@@ -15,8 +15,6 @@ const Navbar = () => {
                 <Link to = '/StudentDashboard' style = {{textDecoration: 'none'}}><Button color="inherit">Student Dashboard</Button></Link>
                 <Link to = '/TeacherDashboard' style = {{textDecoration: 'none'}}><Button color="inherit">Teacher Dashboard</Button></Link>
                 <Link to = '/Admin' style = {{textDecoration: 'none'}}><Button color="inherit">Admin</Button></Link>
-
-
             </Stack>
             </Toolbar>
             
