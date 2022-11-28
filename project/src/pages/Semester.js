@@ -2,24 +2,17 @@ import { Container, Grid, Paper, Typography, Stack, Card, CardContent } from "@m
 import { useState } from "react";
 
 
-const curSemSub = [];
-curSemSub[0] = "Mathematics 1";
-curSemSub[1] = "Technical Com. in English";
-
-const prevSemData = [];
-
-prevSemData[0] = {
-    tName : "Amit Neogi",
-    sName : "Physics",
-    grade : "A"
-}
-
-
 
 const Semester = () => {
 
     const [stuName,setStuName] = useState("Rudransh Singhal");
-    
+    const [prevSemData,setPrevSemData] = useState([{
+        tName : "Amit Neogi",
+        sName : "Physics",
+        grade : "A"
+    }]);
+    const [curSemSub, setCurSemSub] = useState(["Mathematics 1","Technical Com. in English"]);
+   
     const curSemCard = curSemSub.map( subject =>
     <Card  variant="outlined" sx={{ minWidth: 250 }}>
         <CardContent>
