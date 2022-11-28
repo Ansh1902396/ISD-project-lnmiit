@@ -3,8 +3,11 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Navbar from "./Navbar";
 import StudentDashboard from "./pages/StudentDashboard";
+import TeacherDashboard from "./pages/TeacherDashboard";
 import CurrentSemester from "./pages/CurrentSemester";
 import PreviousSemester from "./pages/PreviousSemester";
+import CurrentSemesterTeacher from "./pages/CurrentSemesterTeacher";
+import PreviousSemesterTeacher from "./pages/PreviousSemesterTeacher";
 import { Route, Routes } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { Box, CssBaseline } from "@mui/material";
@@ -47,6 +50,9 @@ function App() {
             <Route path="/StudentDashboard" element={<StudentDashboard/>}></Route>
             <Route path="/CurrentSemester" element={<CurrentSemester/>}></Route>
             <Route path="/PreviousSemester" element={<PreviousSemester/>}></Route>
+            <Route path="/TeacherDashboard" element={<TeacherDashboard/>}></Route>
+            <Route path="/CurrentSemesterTeacher" element={<CurrentSemesterTeacher/>}></Route>
+            <Route path="/PreviousSemesterTeacher" element={<PreviousSemesterTeacher/>}></Route>
           </Routes>
         </Box>
       </CssBaseline>

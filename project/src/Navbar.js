@@ -13,6 +13,8 @@ const Navbar = () => {
                 <Link to = '/'><Button color="inherit">Home</Button></Link>
                 <Link to = '/Login'><Button color="inherit">Login</Button></Link>
                 <Link to = '/StudentDashboard'><Button color="inherit">Student Dashboard</Button></Link>
+                <Link to = '/TeacherDashboard'><Button color="inherit">Teacher Dashboard</Button></Link>
+
             </Stack>
             </Toolbar>
             
