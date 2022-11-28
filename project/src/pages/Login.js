@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Grid, Paper, Typography, TextField } from "@mui/material";
 import GoogleButton from "react-google-button";
+import axios from 'axios'
 const Login = () => {
   const [inputs, setInputs] = useState({
     username: "",
@@ -11,19 +12,12 @@ const Login = () => {
     setInputs({ ...inputs, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (event) => {
-    console.log(inputs);
-    setInputs({ username: "", password: "" });
-  };
-
-  const googleAuth = async() => {
-    // window.open(
-    //   `${process.env.REACT_APP_API_URL}/auth/google/callback`,
-    //   "_self"
-    // );
-
+  const handleSubmit = async(event) => {
+    // console.log(inputs);
+    // setInputs({ username: "", password: "" });
+    console.log(process.env.REACT_APP_API_URL)
     try {
-			const res = await axios.post(`${process.env.REACT_APP_URL}login`, {
+			const res = await axios.post(`${process.env.REACT_APP_API_URL}login`, {
 			  email: inputs.username,
 			  password:inputs.password
 	
@@ -40,6 +34,15 @@ const Login = () => {
 		  catch (error) {
 			console.log(error)
 		  }
+  };
+
+  const googleAuth = async() => {
+    // window.open(
+    //   `${process.env.REACT_APP_API_URL}/auth/google/callback`,
+    //   "_self"
+    // );
+
+    
   };
   const paperStyle = {
     padding: 20,
