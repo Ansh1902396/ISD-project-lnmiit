@@ -14,7 +14,7 @@ const Login = () => {
 
   const handleSubmit = async(event) => {
     // console.log(inputs);
-    // setInputs({ username: "", password: "" });
+    
     console.log(process.env.REACT_APP_API_URL)
     try {
 			const res = await axios.post(`${process.env.REACT_APP_API_URL}login`, {
@@ -34,6 +34,7 @@ const Login = () => {
 		  catch (error) {
 			console.log(error)
 		  }
+    setInputs({ username: "", password: "" });
   };
 
   const googleAuth = async() => {
