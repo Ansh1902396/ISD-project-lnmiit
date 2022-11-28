@@ -2,12 +2,15 @@ import "./App.css";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Navbar from "./Navbar";
-import Semester from "./pages/Semester";
+import StudentDashboard from "./pages/StudentDashboard";
+import CurrentSemester from "./pages/CurrentSemester";
+import PreviousSemester from "./pages/PreviousSemester";
 import { Route, Routes } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { Box, CssBaseline } from "@mui/material";
 import axios from "axios";
 import { useState, useEffect } from "react";
+
 function App() {
   const appTheme = createTheme({
     palette: {
@@ -39,9 +42,11 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route
               path="/Login"
-              element={user ? <Semester /> : <Login />}
+              element={user ? <StudentDashboard/> : <Login />}
             ></Route>
-            <Route path="/Semester" element={<Semester />}></Route>
+            <Route path="/StudentDashboard" element={<StudentDashboard/>}></Route>
+            <Route path="/CurrentSemester" element={<CurrentSemester/>}></Route>
+            <Route path="/PreviousSemester" element={<PreviousSemester/>}></Route>
           </Routes>
         </Box>
       </CssBaseline>
