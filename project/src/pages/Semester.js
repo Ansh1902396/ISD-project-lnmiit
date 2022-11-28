@@ -1,23 +1,18 @@
-import { Container, Grid, Paper, Typography,Box, Stack, Card, CardContent } from "@mui/material";
-
-
-var name = "Rudransh";
-const curSemSub = [];
-curSemSub[0] = "Mathematics 1";
-curSemSub[1] = "Technical Com. in English";
-
-const prevSemData = [];
-
-prevSemData[0] = {
-    tName : "Amit Neogi",
-    sName : "Physics",
-    grade : "A"
-}
+import { Container, Grid, Paper, Typography, Stack, Card, CardContent } from "@mui/material";
+import { useState } from "react";
 
 
 
 const Semester = () => {
-    
+
+    const [stuName,setStuName] = useState("Rudransh Singhal");
+    const [prevSemData,setPrevSemData] = useState([{
+        tName : "Amit Neogi",
+        sName : "Physics",
+        grade : "A"
+    }]);
+    const [curSemSub, setCurSemSub] = useState(["Mathematics 1","Technical Com. in English"]);
+   
     const curSemCard = curSemSub.map( subject =>
     <Card  variant="outlined" sx={{ minWidth: 250 }}>
         <CardContent>
@@ -50,7 +45,7 @@ const Semester = () => {
             <Grid container spacing={3}>
                 <Grid item xs = {12}>
                     <Paper>
-                        <Typography variant="h5" sx = {{padding : 3}}> Name: {name}</Typography>
+                        <Typography variant="h5" sx = {{padding : 3}}> Name: {stuName}</Typography>
                     </Paper>
                 </Grid>
                 <Grid item xs = {12}>
