@@ -8,6 +8,7 @@ import CurrentSemester from "./pages/CurrentSemester";
 import PreviousSemester from "./pages/PreviousSemester";
 import CurrentSemesterTeacher from "./pages/CurrentSemesterTeacher";
 import PreviousSemesterTeacher from "./pages/PreviousSemesterTeacher";
+import AddDropCourse from "./pages/AddDropCourse";
 import Admin from "./pages/Admin";
 import { Route, Routes } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
@@ -55,6 +56,7 @@ function App() {
             <Route path="/CurrentSemesterTeacher" element={<CurrentSemesterTeacher/>}></Route>
             <Route path="/PreviousSemesterTeacher" element={<PreviousSemesterTeacher/>}></Route>
             <Route path="/Admin" element = {<Admin/>}></Route>
+            <Route path="/AddDropCourse" element = {<AddDropCourse/>}></Route>
           </Routes>
         </Box>
       </CssBaseline>
