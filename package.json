@@ -6,5 +6,27 @@
     "express-session": "^1.17.3",
     "md5": "^2.3.0",
     "mongoose": "^6.7.3"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "name": "isd-project-lnmiit",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sajal24/ISD-project-lnmiit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sajal24/ISD-project-lnmiit/issues"
+  },
+  "homepage": "https://github.com/Sajal24/ISD-project-lnmiit#readme"
 }
