@@ -3,23 +3,15 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PreviousSemester = () => {
     const [stuName,setStuName] = useState("Rudransh Singhal");
 
     const [prevSems,setPrevSems] = useState([
     { semName:"Semester 1", semId: 1, }, 
-    { semName:"Semester 2", semId: 2, 
-    semSubs : [ 
-    {tName : "Looo Neogi",
-    sName : "Ijl",
-    grade : "F"},
-
-    {tName : "Usha Kanugoo",
-    sName : "English",
-    grade : "B"}
-    ]}, ]);
+    { semName:"Semester 2", semId: 2,} 
+     ]);
 
     const [prevSemData,setPrevSemData] = useState([{
         tName : "Amit Neogi",
@@ -28,6 +20,16 @@ const PreviousSemester = () => {
     }]);
 
     const [sem, setSem] = useState('');
+
+    useEffect(
+        () => {
+            setPrevSemData([{
+                tName : "Usha",
+                sName : "English",
+                grade : "A"
+            }]);
+        } , [sem]
+    );
 
     const handleSemChange = (event) => {
         setSem(event.target.value);
