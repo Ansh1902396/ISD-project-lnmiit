@@ -3,6 +3,7 @@ import { Button, Grid, Paper, Typography, TextField } from "@mui/material";
 import GoogleButton from "react-google-button";
 import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom";
+
 const Login = ({userId,password,userType}) => {
   const [inputs, setInputs] = useState({
     username: "",
@@ -17,17 +18,31 @@ const Login = ({userId,password,userType}) => {
 
   const handleSubmit = (event) => {
 
-    if (userType === "Student"){
+    if (inputs.username === "20UCS168" && inputs.password === "admin"){
       navigate("/StudentDashboard")
     }
-    else if (userType === "Teacher"){
+    else if (inputs.username === "20UCC168" && inputs.password === "admin"){
+      navigate("/StudentDashboard")
+    }
+    else if (inputs.username === "20UEC007" && inputs.password === "admin"){
+      navigate("/StudentDashboard")
+    }
+    else if (inputs.username ==="RAH123" && inputs.password==="1234" ){
       navigate("/TeacherDashboard")
     }
-    else if ( userType === "Admin"){
+    else if (inputs.username ==="MEE123" && inputs.password==="1234" ){
+      navigate("/TeacherDashboard")
+    }
+    else if (inputs.username ==="MAN123" && inputs.password==="1234" ){
+      navigate("/TeacherDashboard")
+    }
+
+    else if (inputs.username === "Admin" && inputs.password==="lnmiit"){
       navigate("/Admin")
     }
     else{
       navigate("/Login")
+      alert("wrong password")
     }
     // console.log(inputs);
     
@@ -59,6 +74,7 @@ const Login = ({userId,password,userType}) => {
     height: "60vh",
     width: 280,
     margin: "25px auto",
+    
   };
 
   const btStyle = {
