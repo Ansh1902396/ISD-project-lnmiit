@@ -17,11 +17,12 @@ const Login = () => {
     
     console.log(process.env.REACT_APP_API_URL)
     try {
-			const res = await axios.post(`${process.env.REACT_APP_API_URL}login`, {
-			  email: inputs.username,
+			const res = await axios.post(`${process.env.REACT_APP_API_URL}/login`, {
+			  userId: inputs.username,
 			  password:inputs.password
 	
-			}, { validateStatus: false, withCredentials: true });
+			});
+
 		   console.log(res);
 			
 			// if(res.status != 401 && res.data.isgsec){

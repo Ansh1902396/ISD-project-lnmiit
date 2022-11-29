@@ -1,4 +1,4 @@
-import { Grid,Paper,Typography,Card,CardContent, CardActionArea} from "@mui/material";
+import { Grid,Paper,Typography,Card,CardContent, CardActionArea, Button} from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
 
@@ -7,8 +7,17 @@ const StudentDashboard = () => {
             <Paper sx ={{ margin: "3 auto", padding: 3}} spacing = {3} variant="outlined" elevation={2}>
 
                 <Grid container align = 'center' spacing={2}>
-                    <Grid item xs = {12}>
+                    <Grid item xs = {8}>
                         <Typography variant = "h3"  >Choose Semester :</Typography>
+                    </Grid>
+                    <Grid item xs = {4}>
+                        <Button component = {RouterLink}
+                            name="addDropCourseButton"
+                            type="submit"
+                            variant="contained"
+                            to ="/AddDropCourse"
+                        >Add/Drop Course
+                        </Button>
                     </Grid>
                 
                     <Grid item xs = {6}>
