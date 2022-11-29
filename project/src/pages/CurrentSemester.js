@@ -1,13 +1,21 @@
 import { Container, Grid, Paper, Typography, Stack, Card, CardContent } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
 const CurrentSemester = () => {
 
-    const [stuName,setStuName] = useState("Rudransh Singhal");
+    const [stuName,setStuName] = useState("");
 
-    const [curSemSub, setCurSemSub] = useState(["Mathematics 1","Technical Com. in English"]);
+    const [curSemSub, setCurSemSub] = useState([]);
+
+    useEffect(
+        () => {
+            setStuName("Rudransh Singhal");
+            setCurSemSub(["Mathematics 1","Technical Com. in English"]);
+        },
+        []
+    );
    
     const curSemCard = curSemSub.map( subject =>
     <Card  variant="outlined" sx={{ minWidth: 250 }}>

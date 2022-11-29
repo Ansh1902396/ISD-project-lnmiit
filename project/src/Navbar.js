@@ -6,15 +6,13 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 
     return(
-        <AppBar position = 'static'>
+        <AppBar position = 'static' sx = {{bgcolor: "#3b173f",color:"#fff"}}>
             <Toolbar>
                 <Typography variant = 'h5'  sx = {{flexGrow:1}}>Curriculum Management</Typography>
                 <Stack direction='row' spacing = {2} sx ={{}}>
-                <Link to = '/' style = {{textDecoration: 'none'}}><Button color="inherit">Home</Button></Link>
-                <Link to = '/Login' style = {{textDecoration: 'none'}}><Button color="inherit">Login</Button></Link>
-                <Link to = '/StudentDashboard' style = {{textDecoration: 'none'}}><Button color="inherit">Student Dashboard</Button></Link>
-                <Link to = '/TeacherDashboard' style = {{textDecoration: 'none'}}><Button color="inherit">Teacher Dashboard</Button></Link>
-                <Link to = '/Admin' style = {{textDecoration: 'none'}}><Button color="inherit">Admin</Button></Link>
+                <Link to = '/' style = {{textDecoration: 'none'}}><Button sx={{color:"#fff"}}>Home</Button></Link>
+               
+                
             </Stack>
             </Toolbar>
             
