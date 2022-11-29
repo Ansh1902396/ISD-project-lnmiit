@@ -30,16 +30,42 @@ function App() {
     }
   };
   useEffect(() => {
+    handleSubmit();
     getUser();
   }, []);
+
+  const res={};
+  const handleSubmit = async(event) => {
+    // console.log(inputs);
+    
+    console.log(process.env.REACT_APP_API_URL)
+    try {
+			 res = await axios.post(`${process.env.REACT_APP_API_URL}/login`, {
+			  userId: res.username,
+			  password: res.password
+	
+			});
+
+		   console.log(res);
+			
+			// if(res.status != 401 && res.data.isgsec){
+			// setUser(res.data);
+			// setUserLogin(true);
+			// localStorage.setItem("userInfo",JSON.stringify(res.data));
+			// navigate('/gsechome');}
+			// console.log("this is  user data ==>", res.data);
+		  }
+		  catch (error) {
+			console.log(error)
+		  }
+  }
 
   return (
       <CssBaseline>
         <Box >
           <Navbar />
-
           <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/" element={<Login userId = {res.username} password = {res.password} userType = {res.userType} />}></Route>
             <Route
               path="/Login"
               element={user ? <StudentDashboard/> : <Login />}
