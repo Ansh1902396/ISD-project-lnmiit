@@ -7,6 +7,21 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 const Admin = () => {
+    const [gradeDisplay,setGradeDisplay] = useState("Grades Will Display here");
+    const [teacherID,setTeacherID] = useState("");
+
+    const [inputs, setInputs] = useState({
+        StudentRoll: "",
+        semId: 0,
+      });
+      const setMenu=(event)=>{
+        setInputs({...inputs,[event.target.name]:event.target.value})
+        console.log(inputs)
+      }
+    
+      const handleChange = (event) => {
+        setInputs({ ...inputs, [event.target.name]: event.target.value });
+      };
     return (
         <Grid align = 'center'>
             <Grid item xs= {12}>
@@ -30,6 +45,7 @@ const Admin = () => {
                             name="enterTeacherID"
                             variant="outlined"
                             label="Enter Teacher ID"
+                            value={teacherID}
                             required
                         />
 
@@ -53,7 +69,7 @@ const Admin = () => {
 
                         <Paper sx = {{padding: 3}}>
                             <TextField
-                                name="enterStudentRoll"
+                                name="StudentRoll"
                                 variant="outlined"
                                 label="Enter Roll No."
                             />
@@ -64,9 +80,9 @@ const Admin = () => {
                                     labelId="demo-simple-select-label"
                                     label="Semester"
                                     >
-                                    <MenuItem value={10}>Current Semester</MenuItem>
-                                    <MenuItem value={20}>Twenty</MenuItem>
-                                    <MenuItem value={30}>Thirty</MenuItem>
+                                    <MenuItem value={1} name="semId" onClick={setMenu}>Current Semester</MenuItem>
+                                    <MenuItem value={2} name="semId" onClick={setMenu}>Twenty</MenuItem>
+                                    <MenuItem value={3} name="semId" onClick={setMenu}>Thirty</MenuItem>
                                     </Select>
                                 </FormControl>
 
@@ -80,7 +96,7 @@ const Admin = () => {
                             </Box>
                        </Paper>
 
-                       <Typography variant = "paragraph">Grades will display here</Typography>
+                       <Typography variant = "paragraph">{gradeDisplay}</Typography>
                         
                     </Stack>
                 </Paper>

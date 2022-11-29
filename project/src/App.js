@@ -17,11 +17,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 function App() {
-  const appTheme = createTheme({
-    palette: {
-      mode: "light",
-    },
-  });
+  
   const [user, setUser] = useState(null);
 
   const getUser = async () => {
@@ -38,9 +34,8 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={appTheme}>
       <CssBaseline>
-        <Box>
+        <Box >
           <Navbar />
 
           <Routes>
@@ -60,7 +55,6 @@ function App() {
           </Routes>
         </Box>
       </CssBaseline>
-    </ThemeProvider>
   );
 }
 

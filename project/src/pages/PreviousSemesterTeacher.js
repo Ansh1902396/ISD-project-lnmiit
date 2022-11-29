@@ -1,14 +1,24 @@
 import { Container, Grid, Paper, Typography, Stack,TextField, Button } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PreviousSemesterTeacher = () => {
-    const [teachName,setStuName] = useState("Amit Neogi");
+    const [teachName,setStuName] = useState("");
 
-    const [teachID, setTeachID] = useState("d334");
+    const [teachID, setTeachID] = useState("");
 
-    const [subName, setSubName] = useState("Physics");
+    const [subName, setSubName] = useState("");
 
-    const [gradePara, setGradePara] = useState("The grade is A.");
+    const [gradePara, setGradePara] = useState("");
+
+    useEffect(
+        () => {
+
+            setStuName("Amit Neogi");
+            setTeachID("d334");
+            setSubName("Physics");
+            setGradePara("The grade is A.");
+        },[]
+    );
 
 
     
